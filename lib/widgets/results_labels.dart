@@ -12,13 +12,31 @@ class ResultsLabels extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CalculatorBloc, CalculatorState>(
       builder: (context, state) {
+
+        if ( state.firstNumber == '0' && state.secondNumber == '0' ) {
+          return MainResultText(
+              text: state.mathResult.endsWith('.0')
+                    ? state.mathResult.substring(0, state.mathResult.length - 2)
+                    : state.mathResult
+          );
+        }
+
+
         return Column(
           children: [
             SubResult(text: state.firstNumber ),
             SubResult(text: state.operation ),
-            SubResult(text: state.secondNumber ),
+            SubResult(
+              text: state.secondNumber.endsWith('.0')
+                    ? state.secondNumber.substring(0, state.secondNumber.length - 2)
+                    : state.secondNumber
+            ),
             LineSeparator(),
-            MainResultText(text: state.mathResult ),
+            MainResultText(
+              text: state.mathResult.endsWith('.0')
+                    ? state.mathResult.substring(0, state.mathResult.length - 2)
+                    : state.mathResult
+            ),
           ],
         );
       },
