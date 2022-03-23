@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SubResult extends StatelessWidget {
+class SubResultLabel extends StatelessWidget {
 
   final String text;
 
-  const SubResult({Key? key, required this.text}) : super(key: key);
+  const SubResultLabel({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

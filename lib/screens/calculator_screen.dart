@@ -15,11 +15,7 @@ class CalculatorScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
 
-              SubResult( text: '1000' ),
-              SubResult( text: 'X' ),
-              SubResult( text: '1000' ),
-              LineSeparator(),
-              MainResultText( text: '2000' ),
+              ResultGroup(),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

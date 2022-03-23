@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MainResultText extends StatelessWidget {
+class MainResultLabel extends StatelessWidget {
 
   final String text;
 
-  const MainResultText({ 
+  const MainResultLabel({ 
     Key? key, 
     required this.text
   }) : super(key: key);
